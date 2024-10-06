@@ -4,44 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drug Classification Quiz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1 {
-            text-align: center;
-        }
-        .question {
-            margin-bottom: 20px;
-            background: #fff;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .question p {
-            margin-bottom: 10px;
-        }
-        .answers label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .correct {
-            color: green;
-        }
-        .incorrect {
-            color: red;
-        }
-        .submit {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="quiz_script.js" defer></script>
 </head>
-<body>
+<body class="light-theme">
+    <div class="theme-toggle">
+        <button onclick="toggleTheme()">Toggle Dark/Light Theme</button>
+    </div>
     <h1>Drug Classification Quiz</h1>
     <form id="quiz-form">
         <div class="question">
@@ -150,53 +119,5 @@
     </form>
 
     <div id="result" style="text-align: center; margin-top: 20px;"></div>
-
-    <script>
-        function submitQuiz() {
-            const answers = {
-                q1: 'b',
-                q2: 'a',
-                q3: 'c',
-                q4: 'b',
-                q5: 'c',
-                q6: 'a',
-                q7: 'b',
-                q8: 'a',
-                q9: 'a',
-                q10: 'a'
-            };
-            
-            let score = 0;
-            for (let q in answers) {
-                const userAnswer = document.querySelector(`input[name="${q}"]:checked`);
-                const questionElement = document.querySelector(`input[name="${q}"]`).closest('.question');
-                if (userAnswer) {
-                    if (userAnswer.value === answers[q]) {
-                        score++;
-                        questionElement.classList.add('correct');
-                        questionElement.classList.remove('incorrect');
-                    } else {
-                        questionElement.classList.add('incorrect');
-                        questionElement.classList.remove('correct');
-                    }
-                } else {
-                    questionElement.classList.add('incorrect');
-                }
-            }
-            
-            let message = "";
-            if (score === 10) {
-                message = "Excellent! You got a perfect score!";
-            } else if (score >= 7) {
-                message = "Great job! You scored " + score + "/10.";
-            } else if (score >= 4) {
-                message = "You scored " + score + "/10. Keep practicing!";
-            } else {
-                message = "You scored " + score + "/10. Don't give up, review the material and try again!";
-            }
-            
-            document.getElementById('result').innerHTML = `Your score is: ${score}/10<br>${message}`;
-        }
-    </script>
 </body>
 </html>
