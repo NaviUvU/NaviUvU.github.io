@@ -1,4 +1,202 @@
-"Hello World"
-asdasd
-asdasdas
-asdasd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Classification Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question p {
+            margin-bottom: 10px;
+        }
+        .answers label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        .submit {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drug Classification Quiz</h1>
+    <form id="quiz-form">
+        <div class="question">
+            <p>1. Which drug is classified as a Calcium Channel Blocker, Dihydropyridine?</p>
+            <div class="answers">
+                <label><input type="radio" name="q1" value="a"> a) Losartan</label>
+                <label><input type="radio" name="q1" value="b"> b) Amlodipine</label>
+                <label><input type="radio" name="q1" value="c"> c) Hydralazine</label>
+                <label><input type="radio" name="q1" value="d"> d) Propranolol</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>2. What is the drug class of Benazepril (Lotensin)?</p>
+            <div class="answers">
+                <label><input type="radio" name="q2" value="a"> a) ACE Inhibitor</label>
+                <label><input type="radio" name="q2" value="b"> b) Thiazide Diuretic</label>
+                <label><input type="radio" name="q2" value="c"> c) Loop Diuretic</label>
+                <label><input type="radio" name="q2" value="d"> d) Potassium Sparing Diuretic</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>3. Nifedipine ER (Adalat CCC, Procardia XL) belongs to which drug class?</p>
+            <div class="answers">
+                <label><input type="radio" name="q3" value="a"> a) Thiazide Diuretic</label>
+                <label><input type="radio" name="q3" value="b"> b) β-blocker</label>
+                <label><input type="radio" name="q3" value="c"> c) Calcium Channel Blocker, Dihydropyridine</label>
+                <label><input type="radio" name="q3" value="d"> d) Direct Arterial Vasodilator</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>4. Which of the following drugs is an Angiotensin II Receptor Blocker (ARB)?</p>
+            <div class="answers">
+                <label><input type="radio" name="q4" value="a"> a) Lisinopril</label>
+                <label><input type="radio" name="q4" value="b"> b) Olmesartan</label>
+                <label><input type="radio" name="q4" value="c"> c) Carvedilol</label>
+                <label><input type="radio" name="q4" value="d"> d) Chlorthalidone</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>5. Hydralazine (Apresoline) is categorized as:</p>
+            <div class="answers">
+                <label><input type="radio" name="q5" value="a"> a) β-blocker</label>
+                <label><input type="radio" name="q5" value="b"> b) ACE Inhibitor</label>
+                <label><input type="radio" name="q5" value="c"> c) Direct Arterial Vasodilator</label>
+                <label><input type="radio" name="q5" value="d"> d) Thiazide Diuretic</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>6. What combination of drug classes is found in the medication Zestoretic (Hydrochlorothiazide and Lisinopril)?</p>
+            <div class="answers">
+                <label><input type="radio" name="q6" value="a"> a) Thiazide Diuretic/ACE Inhibitor</label>
+                <label><input type="radio" name="q6" value="b"> b) Calcium Channel Blocker/β-blocker</label>
+                <label><input type="radio" name="q6" value="c"> c) Thiazide Diuretic/Angiotensin II Receptor Blocker</label>
+                <label><input type="radio" name="q6" value="d"> d) Potassium Sparing Diuretic/Loop Diuretic</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>7. Which of the following is a mixed α/β-Adrenergic Blocker?</p>
+            <div class="answers">
+                <label><input type="radio" name="q7" value="a"> a) Atenolol</label>
+                <label><input type="radio" name="q7" value="b"> b) Carvedilol</label>
+                <label><input type="radio" name="q7" value="c"> c) Clonidine</label>
+                <label><input type="radio" name="q7" value="d"> d) Furosemide</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>8. Metoprolol (Lopressor, Toprol XL) is categorized under which class?</p>
+            <div class="answers">
+                <label><input type="radio" name="q8" value="a"> a) β-blocker, Cardioselective</label>
+                <label><input type="radio" name="q8" value="b"> b) Calcium Channel Blocker</label>
+                <label><input type="radio" name="q8" value="c"> c) ACE Inhibitor</label>
+                <label><input type="radio" name="q8" value="d"> d) α1-blocker</label>
+            </div>
+        </div>
+        
+        <div class="question">
+            <p>9. Which drug is classified as a Mineralocorticoid Diuretic?</p>
+            <div class="answers">
+                <label><input type="radio" name="q9" value="a"> a) Spironolactone</label>
+                <label><input type="radio" name="q9" value="b"> b) Triamterene</label>
+                <label><input type="radio" name="q9" value="c"> c) Hydrochlorothiazide</label>
+                <label><input type="radio" name="q9" value="d"> d) Losartan</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p>10. Clonidine (Catapres, Kapvay) is categorized as:</p>
+            <div class="answers">
+                <label><input type="radio" name="q10" value="a"> a) Central α2-agonist</label>
+                <label><input type="radio" name="q10" value="b"> b) β-blocker</label>
+                <label><input type="radio" name="q10" value="c"> c) Calcium Channel Blocker</label>
+                <label><input type="radio" name="q10" value="d"> d) Angiotensin II Receptor Blocker</label>
+            </div>
+        </div>
+        
+        <div class="submit">
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </div>
+    </form>
+
+    <div id="result" style="text-align: center; margin-top: 20px;"></div>
+
+    <script>
+        function submitQuiz() {
+            const answers = {
+                q1: 'b',
+                q2: 'a',
+                q3: 'c',
+                q4: 'b',
+                q5: 'c',
+                q6: 'a',
+                q7: 'b',
+                q8: 'a',
+                q9: 'a',
+                q10: 'a'
+            };
+            
+            let score = 0;
+            for (let q in answers) {
+                const userAnswer = document.querySelector(`input[name="${q}"]:checked`);
+                const questionElement = document.querySelector(`input[name="${q}"]`).closest('.question');
+                if (userAnswer) {
+                    if (userAnswer.value === answers[q]) {
+                        score++;
+                        questionElement.classList.add('correct');
+                        questionElement.classList.remove('incorrect');
+                    } else {
+                        questionElement.classList.add('incorrect');
+                        questionElement.classList.remove('correct');
+                    }
+                } else {
+                    questionElement.classList.add('incorrect');
+                }
+            }
+            
+            let message = "";
+            if (score === 10) {
+                message = "Excellent! You got a perfect score!";
+            } else if (score >= 7) {
+                message = "Great job! You scored " + score + "/10.";
+            } else if (score >= 4) {
+                message = "You scored " + score + "/10. Keep practicing!";
+            } else {
+                message = "You scored " + score + "/10. Don't give up, review the material and try again!";
+            }
+            
+            document.getElementById('result').innerHTML = `Your score is: ${score}/10<br>${message}`;
+        }
+    </script>
+</body>
+</html>
